@@ -4,7 +4,10 @@
 //Link html and api routes
 
 
-//Express and PORT
+//create express server
+
+
+//Set initial PORTs
 
 
 //Data Parsing???
