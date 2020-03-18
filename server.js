@@ -1,5 +1,5 @@
 //Node Dependencies
-
+var express = require("express");
 
 //Link html and api routes
 
@@ -8,7 +8,8 @@
 
 
 //Set initial PORTs
-
+var app = express();
+var PORT = process.env.PORT || 8080;
 
 //Data Parsing???
 
@@ -17,3 +18,6 @@
 
 
 //Listener; Starting the Server
+app.listen(PORT, function() {
+    console.log("Listening on PORT: " + PORT);
+});
