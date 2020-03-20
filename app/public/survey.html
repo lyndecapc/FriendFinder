@@ -177,7 +177,7 @@
 
     <footer>
         <div class="container">
-            <p><a href="/api/friends">API Friends Link</a> | <a href="https://github.com/lyndecapc/FriendFinder">GitHub
+            <p><a href="/api/friendsData">API Friends Link</a> | <a href="https://github.com/lyndecapc/FriendFinder">GitHub
                     Repo</a></p>
         </div>
     </footer>
@@ -237,7 +237,7 @@ $("#submit").on("click", function() {
             ]
           };
           var currentURL = window.location.origin;
-          $.post(currentURL + "/api/friends", userData, function(data) {
+          $.post(currentURL + "/api/friendsData", userData, function(data) {
             $("#matchName").text(data.name);
             $("#matchImg").attr("src", data.photo);
 
