@@ -7,7 +7,7 @@ require("dotenv").config();
 //create express server
 //Set initial PORTs
 var app = express();
-var PORT = process.env.PORT;
+var PORT = process.env.PORT || 3060;
 
 //Data Parsing for Express App
 app.use(bodyParser.json());

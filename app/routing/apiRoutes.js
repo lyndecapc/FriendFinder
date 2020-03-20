@@ -1,18 +1,18 @@
-var friendSurveyData = require("../data/friends.js");
+var friendsData = require("../data/friends.js");
 
-function apiRoutes(app) {
+module.exports = function(app) {
     app.get("/api/friends", function (req, res) {
-        res.json(friendSurveyData);
+        res.json(friendsData);
     });
 
     app.post("/api/friends", function (req, res) {
         var newFriend = {
-            name: req.body.nme,
+            name: req.body.name,
             photo: req.body.photo,
             scores: []
         };
         var scoresArray = [];
-        for (var i = 0; i < req.body.scores.length; I++) {
+        for (var i = 0; i < req.body.scores.length; i++) {
             scoresArray.push(parseInt(req.body.scores[i]))
         }
         newFriend.scores = scoresArray;
@@ -34,10 +34,9 @@ function apiRoutes(app) {
 
         res.json(bestFriendMatch);
 
-        friendSurveyData.push(newFriend);
+        friendsData.push(newFriend);
 
     });
 }
 
 //export for use in server.js
-module.exports = apiRoutes;
