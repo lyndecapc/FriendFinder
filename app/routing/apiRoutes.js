@@ -30,6 +30,11 @@ module.exports = function(app) {
          };
 
        console.log("Name: : " + userName);
+       console.log("User Score " + userScores);
+
+       var sum = b.reduce((a, b) => a +b, 0);
+
+       console.log("Sum of users score " + sum);
        console.log("Best match friend diff " + bestMatch.friendDifference);
        console.log("==================================");
 
