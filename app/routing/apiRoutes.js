@@ -15,15 +15,15 @@ module.exports = function(app) {
             friendDifference: 1000
         };
 
-        var userData = req.body;
-        var userName = userData.name;
+       var userData = req.body;
+        var userName = req.body.name;
         var userScores = userData.scores;
 
         var b = userScores.map(function(item) {
             return parseInt(item, 10);
         });
 
-         userData = {
+        userData = {
              name: req.body.name,
              photo: req.body.photo,
              scores: b
